@@ -2,7 +2,7 @@
 
 # XSS
 echo "Filtering URLs for potential XSS endpoints..."
-cat "output.txt" | Gxss | kxss | grep -oP '^URL: \K\S+' | sed 's/=.*/=/' | sort -u > "$output_dir/xss_output.txt"
+cat "output.txt" | Gxss | kxss | grep -oP '^URL: \K\S+' | sed 's/=.*/=/' | sort -u > "xss_output.txt"
 echo "Extracting final filtered URLs to xss_output.txt..."
 
 # Open Redirect
